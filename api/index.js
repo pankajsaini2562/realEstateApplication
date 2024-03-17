@@ -1,6 +1,8 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import User from './models/userModel.js'
+import userRouter from './routes/userRoute.js'
 dotenv.config()
 const app = express()
 
@@ -13,3 +15,4 @@ app.listen(3000,()=>{
 .catch((error)=>{
 console.log(error)
 })
+app.use('/api/user',userRouter)
