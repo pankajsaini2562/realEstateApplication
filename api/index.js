@@ -10,7 +10,7 @@ app.use(express.json())
 
 mongoose.connect(process.env.MONGO).then(()=>{
 console.log("connected to database")
-app.listen(3008,()=>{
+app.listen(3000,()=>{
   console.log("server is running succesfully")
 })
 })
